@@ -10,11 +10,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * @author riley
  *
  */
+@Data
+@NoArgsConstructor
 @Entity
 public class Owner {
 	@Id
@@ -26,10 +30,9 @@ public class Owner {
 	@Autowired
 	private Pets pets;
 	
-	public Owner() {
+	/*public Owner() {
 		super();
-		this.email = "test@test.com";
-	}
+	}*/
 	
 	public Owner(String name) {
 		super();
@@ -51,7 +54,7 @@ public class Owner {
 		this.email = email;
 	}
 
-	public long getId() {
+	/*public long getId() {
 		return id;
 	}
 
@@ -94,7 +97,7 @@ public class Owner {
 	@Override
 	public String toString() {
 		return "Owner [id=" + id + ", name=" + name + ", phone=" + phone + ", email=" + email + ", pets=" + pets + "]";
-	}
+	}*/
 
 	
 	

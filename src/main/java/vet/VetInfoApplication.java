@@ -16,12 +16,12 @@ import vet.controller.BeanConfiguration;
 import vet.repository.OwnerRepository;
 
 @SpringBootApplication
-public class VetInfoApplication implements CommandLineRunner {
+public class VetInfoApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(VetInfoApplication.class, args);
 	}
-	@Autowired
+	/*@Autowired
 	OwnerRepository repo;
 	
 	@Override
@@ -42,5 +42,5 @@ public class VetInfoApplication implements CommandLineRunner {
 			System.out.println(own.toString());
 		}
 		((AbstractApplicationContext) appContext).close();
-	}
+	}*/
 }
