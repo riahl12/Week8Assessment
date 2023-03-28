@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>View All Owners</title>
+</head>
+<body>
+<h1>Owner List</h1>
+<form>
+<table>
+<tr th:each="currentOwner : ${owners}">
+	<td th:text="${currentOwner.id}"/>
+	<td th:text="${currentOwner.name}"/>
+	<td th:text="${currentOwner.phone}"/>
+	<td th:text="${currentOwner.email}"/>
+	<td th:text="${currentOwner.pets.petName}"/>
+	<td th:text="${currentOwner.pets.age}"/>
+	<td th:text="${currentOwner.pets.species}"/>
+<td><a th:href="@{/edit/{id}(id=${currentOwner.id})}">Edit</a></td>
+<td><a th:href="@{/delete/{id}(id=${currentOwner.id})}">Delete</a></td>
+</tr>	
+</table>
+</form>
+<a href="../inputOwner">Add a new Owner</a>
+</body>
+</html>
